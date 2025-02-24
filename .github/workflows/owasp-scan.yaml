@@ -46,7 +46,7 @@ jobs:
           export_default_credentials: true
       - name: ZAP Base Scan
         if: ${{ inputs.ZAP_SCAN_TYPE == 'base' }}
-        uses: zaproxy/action-baseline@v0.6.1
+        uses: zaproxy/action-baseline@v0.12.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
